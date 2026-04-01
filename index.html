@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holoidentifier</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 98vh;
+        }
+        #holomem {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 16px;
+        }
+        #internal {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        button {
+            margin-top: 16px;
+            width: 100%;
+            font-size: 2em;
+            padding: 16px 0;
+            background-color: #485180;
+            color: white;
+            border-radius: 16px;
+        }
+        #answers {
+            display: flex;
+            width: 100%;
+        }
+        #answers > button {
+            width: 50%;
+            border-radius: 0;
+            border: none;
+        }
+        #wrong {
+            background-color: red;
+        }
+        #right {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="holomem">
+        <div id="internal">
+            <img id="pic" />
+            <div style="display: none" id="name"></div>
+            <button id="reveal" onclick="reveal()">Reveal</button>
+            <div id="answers">
+                <button style="display: none" id="wrong" onclick="wrong()">X</button>
+                <button style="display: none" id="right" onclick="right()">✓</button>
+                <button style="display: none; width: 100%" id="results" onclick="results()">RESULTS</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
